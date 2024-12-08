@@ -1,9 +1,26 @@
-/*Header Area*/
+/* Header Area */
+header {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;             
+    padding: 0 20px;
+}
+
+.header-left {
+    position: absolute; 
+    left: 15px; 
+}
 .heading {
     text-align: center;
     font-size: 40px;
+    flex: 1;
 }
 
+nav {
+    display: none;
+}
+
+/* Main Content */
 body {
     min-height: 100vh; 
     display: flex;
@@ -12,8 +29,21 @@ body {
 
 main {
     flex: 1; /* Takes all remaining space, pushing footer down */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;   /* Centers them vertically */
+    align-items: center;       /* Centers them horizontally */
+    height: 100%;              /* Ensures main takes up available space */
+    margin: 0;
+    padding: 0;
 }
 
+.btn-book-table,
+.btn-view-menu {
+    margin: 0.5em 0;           /* Some spacing between the buttons */
+}
+
+/* Footer */
 .footer {
     display: flex;
     justify-content: space-between;
