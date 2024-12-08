@@ -1,25 +1,18 @@
 /* Header Area */
-header {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;             
-    padding: 0 20px;
-}
-
-.header-left {
-    position: absolute; 
-    left: 15px; 
-}
 .heading {
     text-align: center;
     font-size: 40px;
     flex: 1;
 }
 
-nav {
+/* Dropdown Menu */
+.menu-items {
     display: none;
 }
 
+.menu-items.visible {
+    display: block;
+}
 /* Main Content */
 body {
     min-height: 100vh; 

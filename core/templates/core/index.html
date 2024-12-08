@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
     <title>The Stag's Inn</title>
 </head>
+
 <body>
     <header>
         <h1 class="heading">The Stag's Inn</h1>
 
-        <div class="header-left"> 
-        <input type="checkbox" id="menu-click">
-        <label for="menu-click" class="menu-toggle">X</label>
-        <nav>
-            <ul id="menu">
-                <li><a href=""></a>View Our Menu</li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </nav>
+        <div class="menu-container">
+            <button class="toggle-menu" onclick="toggleMenu()">Menu</button>
+            <div id="dropdownList" class="menu-items">
+                <a href="#">Placeholder 1</a>
+                <a href="#">Placeholder 2</a>
+                <a href="#">Placeholder 3</a>
+
+            </div>
+        </div>
     </header>
 
         <main>
@@ -49,5 +49,6 @@
             </ul>
         </div>
     </footer>
+    <script src="{% static 'core/script.js' %}"></script>
 </body>
 </html>
