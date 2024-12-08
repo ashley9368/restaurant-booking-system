@@ -13,11 +13,18 @@
 .menu-items.visible {
     display: block;
 }
+
 /* Main Content */
 body {
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
+min-height: 100vh; 
+display: flex;
+flex-direction: column;
+
+    /* Background Image */
+    background-image: url("{% static 'core/images/background-image.jpeg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main {
