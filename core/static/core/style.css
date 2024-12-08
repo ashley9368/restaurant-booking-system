@@ -1,4 +1,26 @@
+/*Header Area*/
 .heading {
     text-align: center;
     font-size: 40px;
+}
+
+body {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Takes all remaining space, pushing footer down */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1em;
+}
+
+.footer-section {
+    width: 45%;
 }
