@@ -1,14 +1,30 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here. # UNDER CONSTRUCTION :D
+# Monday - Friday: 9:00 AM - 9:00 PM
+# Saturday: 10:00 AM - 10:00 PM
+# Sunday: 10:00 AM - 8:00 pm
+
+# Create your models here. # UNDER CONSTRUCTION :D                                 
 class TableBooking(models.Model):
     TIME_SLOTS = [
-        ('09:00', '9:00 AM')
+        ('09:00', '9:00 AM'),
+        ('10:00', '10:00 AM'),
+        ('11:00', '11:00 AM'),
+        ('12:00', '12:00 PM'),
+        ('13:00', '13:00 PM'),
+        ('14:00', '14:00 PM'),
+        ('15:00', '15:00 PM'),
+        ('16:00', '16:00 PM'),
+        ('17:00', '17:00 PM'),
+        ('18:00', '18:00 PM'),
+        ('19:00', '19:00 PM'),
+        ('20:00', '20:00 PM'),
+        ('21:00', '21:00 PM'),
     ]
     date = models.DateField() # Date the user wants to book
 
-    time = models.CharField(max_length=5, choices=TIME_SLOTS, default='9:00') # Time the user would like to book
+    time = models.CharField(max_length=5, choices=TIME_SLOTS) # Time the user would like to book
 
     guests = models.PositiveIntegerField(default=1) # Sets the default number of guests to 1
 
