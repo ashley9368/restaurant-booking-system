@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 
 # Monday - Sunday: 9:00 AM - 9:00 PM
 
-# Create your models here. # UNDER CONSTRUCTION :D                                 
+# Create your models here. # UNDER CONSTRUCTION :D 
+
+#Times avaliable for booking                                
 class TableBooking(models.Model):
     TIME_SLOTS = [
         ('09:00', '9:00 AM'),
