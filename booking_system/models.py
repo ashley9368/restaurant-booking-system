@@ -1,9 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Monday - Friday: 9:00 AM - 9:00 PM
-# Saturday: 10:00 AM - 10:00 PM
-# Sunday: 10:00 AM - 8:00 pm
+# Monday - Sunday: 9:00 AM - 9:00 PM
 
 # Create your models here. # UNDER CONSTRUCTION :D                                 
 class TableBooking(models.Model):
@@ -20,12 +18,8 @@ class TableBooking(models.Model):
         ('18:00', '18:00 PM'),
         ('19:00', '19:00 PM'),
         ('20:00', '20:00 PM'),
-        ('21:00', '21:00 PM'),
     ]
     date = models.DateField() # Date the user wants to book
-
     time = models.CharField(max_length=5, choices=TIME_SLOTS) # Time the user would like to book
-
     guests = models.PositiveIntegerField(default=1) # Sets the default number of guests to 1
-
     user = models.ForeignKey(User, on_delete=models.CASCADE) # Links the booking to the user; deletes bookings if the user is removed
