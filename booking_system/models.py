@@ -5,4 +5,5 @@ from django.contrib.auth.models import User
 class TableBooking(models.Model):
     date = models.DateField() # Date the user wants to book
     time = models.TimeField() # Time the user would like to book
+    guests = models.PositiveIntegerField(default=1) # Sets the default number of guests to 1
     user = models.ForeignKey(User, on_delete=models.CASCADE) # Links the booking to the user; deletes bookings if the user is removed
