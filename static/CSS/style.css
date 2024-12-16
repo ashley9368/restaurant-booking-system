@@ -87,3 +87,11 @@ main {
 .footer-section {
     width: 45%;
 }
+
+/* SIGNUP PAGE */
+.signup-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
