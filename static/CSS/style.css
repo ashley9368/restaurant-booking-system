@@ -82,6 +82,10 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     padding: 1em;
+    background-color: #8697C4;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0 0;
 }
 
 .footer-section {

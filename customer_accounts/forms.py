@@ -2,3 +2,5 @@ from django import forms
 
 class SignupForm(forms.Form):
     username = forms.CharField(max_length=50, required=True)
+    email
+    password
