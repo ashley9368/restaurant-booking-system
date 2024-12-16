@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from booking_system import views as booking_views
+from customer_accounts import views as accounts_views
 from . import views
 
 urlpatterns = [
     path('', views.homepage, name='homepage'), # The Home Page
+    path('accounts/', accounts_views.customer_accounts, name='customer_accounts'),
     path('dashboard/', include('admin_dashboard.urls')), # The Admin Dashboard
     path('make/', booking_views.make_booking, name='make_booking'), # The Booking page
     path('admin/', admin.site.urls),
