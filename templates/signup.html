@@ -12,8 +12,8 @@
     <h1>SignUp Page</h1>
     </div>
     <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+        {% csrf_token %} <!-- Protects the form from attacks -->
+        {{ form.as_p }} <!-- Displays the form with fields in <p> tags -->
         <button type="submit">Signup</button>
     </form>
 

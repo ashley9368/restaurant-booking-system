@@ -33,12 +33,11 @@
     </header>
 
     <main>
-
-    <button class="btn btn-cancel">Cancel Booking</button>
-    <button class="btn btn-date">Date</button>
-    <button class="btn btn-time">Time</button>
-    <button class="btn btn-guests">Amount of guests</button>
-
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }} <!-- Renders all form fields with labels -->
+            <button type="submit" class="btn-submit">Book Now</button>
+        </form>
     </main>
 
     <footer class="footer">
