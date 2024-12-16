@@ -8,10 +8,14 @@
     <title>Signup</title>
 </head>
 <body>
-
     <div class="signup-title">
     <h1>SignUp Page</h1>
     </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Signup</button>
+    </form>
 
 </body>
 </html>
