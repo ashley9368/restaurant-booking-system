@@ -22,7 +22,7 @@ class TableBooking(models.Model):
         ('20:00', '20:00 PM'),
     ]
 
-    TABLE_NUMBERS = [(i, f"Table {i}") for i in range (1,5)]
+    TABLE_NUMBERS = [(i, f"Table {i} (2 seats)") for i in range (1,5)] + [(i, f"Table {i} (4 seats)") for i in range(5, 11)]
 
     date = models.DateField() # Date the user wants to book
     time = models.CharField(max_length=5, choices=TIME_SLOTS) # Time the user would like to book
