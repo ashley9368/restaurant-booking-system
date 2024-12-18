@@ -34,11 +34,6 @@
 
     <main>
         <h1>Book a Table</h1>
-        <form method="POST" action="{% url 'make_booking' %}">
-            {% csrf_token %}
-            {{ form.as.p }}
-            <button type="submit">Book Now</button>
-        </form>
     </main>
 
     <footer class="footer">
