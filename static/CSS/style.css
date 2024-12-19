@@ -92,7 +92,7 @@ main {
     background-color: #8697C4;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
 }
 
 .footer-section {
@@ -105,4 +105,8 @@ main {
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+
+ul {
+    list-style-type: none; /* removes black dots next to social icons (and opening times)*/
 }
