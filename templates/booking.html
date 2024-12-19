@@ -33,7 +33,11 @@
     </header>
 
     <main>
-        <h1>Book a Table</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Book A Table</button>
+        </form>
     </main>
 
     <footer class="footer">
