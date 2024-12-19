@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from .forms import SignupForm
 
 # Create your views here.
-def signup(request):
-    return render(request, 'signup.html')
+
+# Check if the request method is POST (form submitted)
+def signup(request): 
+    if request.method == 'POST':
+        form = SignupFrom(request.POST)
