@@ -9,6 +9,6 @@ def make_booking(request):
         if form.is_valid():
             form.save()
 
-    else: form = TableBookingForm()
+        else: form = TableBookingForm()
 
     return render(request, 'booking.html', {'form': form})
