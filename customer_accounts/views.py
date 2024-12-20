@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import SignupForm
 from django.shortcuts import redirect
-from django.http import HttpResponse
+from .forms import LoginForm
 
 # Create your views here.
 
