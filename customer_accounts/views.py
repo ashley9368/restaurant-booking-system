@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import SignupForm
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -17,3 +18,6 @@ def signup(request):
         form = SignupForm()
 # Load the signup.html template with the form
     return render(request, 'signup.html', {'form': form})
+
+def login_view(request):
+    return HttpResponse('login page')
