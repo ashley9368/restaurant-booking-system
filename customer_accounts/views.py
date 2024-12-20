@@ -20,4 +20,8 @@ def signup(request):
     return render(request, 'signup.html', {'form': form})
 
 def login_view(request):
-    return HttpResponse('login page')
+    form = LoginForm(data=request.POST or None) # Use submitted data if available, otherwise show empty form
+    if request.method == 'POST':
+        if form.is_valid():
+            username = form.cleaned_data.get('username') # Get the username from the form after checking the input
+            password = form.cleaned_data.get('password')
