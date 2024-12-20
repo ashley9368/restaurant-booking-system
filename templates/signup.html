@@ -12,10 +12,11 @@
     <h1>SignUp Page</h1>
     </div>
     <form method="post">
-        {% csrf_token %} <!-- Protects the form from attacks -->
+        {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
         {{ form.as_p }} <!-- Displays the form with fields in <p> tags -->
         <button type="submit">Signup</button>
     </form>
-
+    <!-- Link to take the user back to the homepage -->
+<a href="{% url 'homepage' %}">Back to HomePage</a>
 </body>
 </html>

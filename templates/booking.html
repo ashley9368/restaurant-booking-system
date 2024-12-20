@@ -13,28 +13,28 @@
 <body style="background-image: url('{% static 'images/background.avif' %}');">
     <header>
         <h1 class="heading">BOOKING PAGE</h1> </body>
-
+<!-- Hamburger menu for user to click to view options for website -->
         <div class="menu-container">
             <button class="menu-toggle" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>  
             </button>
             <div id="dropdownList" class="menu-items">
-                <a href="#">Placeholder 1</a>
-                <a href="#">Placeholder 2</a>
-                <a href="#">Placeholder 3</a>
+                <a href="#">View Our Menu</a> 
+                <a href="#">Make A Booking</a>
+                <a href="#">Sign Up</a>
             </div>
         </div>
-
+<!-- Icon for user to click to SignUp -->
         <div class="login-icon">
             <a href="{% url 'signup' %}" class="login-link"> <!-- Takes user to signup page -->
                 <i class="fas fa-user"></i>
             </a>
         </div>
     </header>
-
+<!-- Main Area on page -->
     <main>
         <form method="post">
-            {% csrf_token %}
+            {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
             <div class="form-wrapper">
             {{ form.as_p }}
             </div>
@@ -42,6 +42,7 @@
         </form>
     </main>
 
+<!-- Footer Section -->
     <footer class="footer">
         <div class="footer-section">
             <h3>Opening Times</h3>
@@ -49,7 +50,6 @@
                 <li>Monday - Sunday: 9:00 AM - 9:00 PM</li>
             </ul>
         </div>
-
         <div class="footer-section">
             <h3>How To Find Us</h3>
             <ul class="social-links">
@@ -69,5 +69,5 @@
             </ul>
         </div>
     </footer>
-    <script src="{% static 'JS/script.js' %}"></script>
+    <script src="{% static 'JS/script.js' %}"></script> <!-- Links JS -->
 </html>

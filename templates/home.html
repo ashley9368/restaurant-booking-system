@@ -20,14 +20,14 @@
                 <i class="fa-solid fa-bars"></i>  
             </button>
             <div id="dropdownList" class="menu-items">
-                <a href="#">Placeholder 1</a>
-                <a href="#">Placeholder 2</a>
-                <a href="#">Placeholder 3</a>
+                <a href="#">View Our Menu</a>
+                <a href="#">Make A Booking</a>
+                <a href="#">Sign Up</a>
             </div>
         </div>
-<!-- Icon for user to click to login -->
+<!-- Icon for user to click to SignUp -->
         <div class="login-icon">
-            <a href="#" class="login-link">
+            <a href="{% url 'signup' %}" class="login-link"> <!-- Takes user to signup page -->
                 <i class="fas fa-user"></i>
             </a>
         </div>
@@ -67,6 +67,6 @@
             </ul>
         </div>
     </footer>
-    <script src="{% static 'JS/script.js' %}"></script>
+    <script src="{% static 'JS/script.js' %}"></script> <!-- Links JS -->
 </body>
 </html>
