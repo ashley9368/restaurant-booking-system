@@ -14,22 +14,27 @@
     <header>
         <h1 class="heading">BOOKING PAGE</h1> </body>
 <!-- Hamburger menu for user to click to view options for website -->
-        <div class="menu-container">
-            <button class="menu-toggle" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>  
-            </button>
-            <div id="dropdownList" class="menu-items">
-                <a href="#">View Our Menu</a> 
-                <a href="#">Make A Booking</a>
-                <a href="#">Sign Up</a>
-            </div>
-        </div>
-<!-- Icon for user to click to SignUp -->
-        <div class="login-icon">
-            <a href="{% url 'signup' %}" class="login-link"> <!-- Takes user to signup page -->
-                <i class="fas fa-user"></i>
-            </a>
-        </div>
+<div class="menu-container">
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div id="dropdownList" class="menu-items">
+        <a href="#">View Our Menu</a>
+        <a href="#">Make A Booking</a>
+        <a href="#">Sign Up</a>
+    </div>
+</div>
+<!-- Login/signup/ dropdownmenu -->
+<div class="menu-container-account">
+    <button class="menu-toggle-account" onclick="toggleAccountMenu()">
+        <i class="fas fa-user"></i>
+    </button>
+    <div id="account-dropdown" class="login-signup">
+        <a href="#">Login</a>
+        <a href="#">Signup</a>
+        <a href="#">Logout</a>
+    </div>
+</div>
     </header>
 <!-- Main Area on page -->
     <main>
