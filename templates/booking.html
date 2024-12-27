@@ -44,6 +44,12 @@
             {{ form.as_p }}
             </div>
             <button type="submit">Book Table</button>
+
+            {% if messages %} <!-- Checks if there is message to display -->
+            <ul class="messages">
+                <li class="success">Booking Successful</li> <!-- Display the success message -->
+            </ul>
+            {% endif %} <!-- End the if statement -->
         </form>
     </main>
 
