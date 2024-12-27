@@ -22,8 +22,7 @@ from . import views
 
 urlpatterns = [
     path('', views.homepage, name='homepage'), # The Home Page
-    path('accounts/', accounts_views.signup, name='signup'),
-    path('accounts/login', accounts_views.login_view, name='login'),
+    path('accounts/', include('customer_accounts.urls')), # Add all customer_accounts URLs
     path('dashboard/', include('admin_dashboard.urls')), # The Admin Dashboard
     path('make/', booking_views.make_booking, name='make_booking'), # The Booking page
     path('admin/', admin.site.urls),
