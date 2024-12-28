@@ -1,18 +1,20 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-    <title>Table & Vine</title>
+<title>Table & Vine</title>
 </head>
 
 <body style="background-image: url('{% static 'images/background.avif' %}');">
     <header>
-        <h1 class="heading">BOOKING PAGE</h1> </body>
+        <h1 class="heading">BOOKING PAGE</h1>
+</body>
 <!-- Hamburger menu for user to click to view options for website -->
 <div class="menu-container">
     <button class="menu-toggle" onclick="toggleMenu()">
@@ -35,50 +37,55 @@
         <a href="#">Logout</a>
     </div>
 </div>
-    </header>
+</header>
 <!-- Main Area on page -->
-    <main>
-        <form method="post">
-            {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
-            <div class="form-wrapper">
+<main>
+    {% if messages %}<!-- Checks if there is message to display -->
+    <ul class="messages">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li> <!-- Display the success message -->
+        {% endfor %}<!-- End the if statement -->
+    </ul>
+    {% else %}
+    <form method="post">
+        {% csrf_token %}<!-- Adds security to Protect the form from CSRF attacks -->
+        <div class="form-wrapper">
             {{ form.as_p }}
-            </div>
-            <button type="submit">Book Table</button>
-
-            {% if messages %} <!-- Checks if there is message to display -->
-            <ul class="messages">
-                <li class="success">Booking Successful</li> <!-- Display the success message -->
-            </ul>
-            {% endif %} <!-- End the if statement -->
-        </form>
-    </main>
+        </div>
+        <button type="submit">Book Table</button>
+    </form>
+    {% endif %}
+</main>
 
 <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-section">
-            <h3>Opening Times</h3>
-            <ul>
-                <li>Monday - Sunday: 9:00 AM - 9:00 PM</li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>How To Find Us</h3>
-            <ul class="social-links">
-                <li>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our facebook page (Opens a new tab)"><i class="fa-brands fa-facebook">Facebook</i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+<footer class="footer">
+    <div class="footer-section">
+        <h3>Opening Times</h3>
+        <ul>
+            <li>Monday - Sunday: 9:00 AM - 9:00 PM</li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>How To Find Us</h3>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our facebook page (Opens a new tab)"><i
+                        class="fa-brands fa-facebook">Facebook</i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener"
                     aria-label="Visit our instagram page (Opens a new tab)"><i
                         class="fa-brands fa-instagram">Instagram</i></a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our instagram page (Opens a new tab)"><i class="fa-brands fa-twitter">Twitter</i></a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-    <script src="{% static 'JS/script.js' %}"></script> <!-- Links JS -->
+            </li>
+            <li>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our instagram page (Opens a new tab)"><i
+                        class="fa-brands fa-twitter">Twitter</i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script src="{% static 'JS/script.js' %}"></script> <!-- Links JS -->
+
 </html>

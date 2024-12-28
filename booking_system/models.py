@@ -18,16 +18,6 @@ TIME_SLOTS = [
     ('20:00', '20:00 PM'),
 ]
 
-AMOUNT_OF_GUESTS = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-]
 class TableBooking(models.Model):
     date = models.DateField() # Date the user wants to book
     time = models.CharField(max_length=5, choices=TIME_SLOTS) # Time the user would like to book
