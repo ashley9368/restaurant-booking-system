@@ -1,12 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import TableBookingForm
+from .models import TableBooking
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages # Import messages
+from django.contrib import messages  # Import messages
 
 # Create your views here.
 
 # Check if the request method is POST (form submitted)
 def make_booking(request):
+    # Check if the user already has a booking
+    existing_booking = TableBooking.objects.filter(user=request.user).first()
+
+    if existing_booking:
+        # Show the existing booking instead of the form
+        return render(request, 'booking.html', {'booking': existing_booking})
+
     if request.method == 'POST':
         form = TableBookingForm(request.POST)
 # Validate the form and save the data if its valid
@@ -19,6 +27,7 @@ def make_booking(request):
             booking.save()
             # Add message to say booking successful
             messages.success(request, 'Booking Successful!')
+            return redirect('make_booking') # Redirect to booking page to allow user to make a new booking
 
 # If its not a POST request display empty form
     else: form = TableBookingForm()
