@@ -6,6 +6,7 @@ from django.contrib import messages  # Import messages
 
 # Create your views here.
 
+@login_required
 # Check if the request method is POST (form submitted)
 def make_booking(request):
     # Check if the user already has a booking
@@ -32,4 +33,4 @@ def make_booking(request):
 # If its not a POST request display empty form
     else: form = TableBookingForm()
 # Load the booking.html template with the form
-    return render(request, 'booking.html', {'form': form})
+    return render(request, 'manage_booking.html', {'form': form})
