@@ -12,5 +12,10 @@ def manage_booking(request):
         #If no booking exists, redirect to the booking page
         return redirect('make_booking')
 
+    if request.method == "POST" and 'delete_booking' in request.POST:
+        # Delete the booking if the delete button is clicked
+        booking.delete()
+        return redirect('make_booking')
+
     # Render the manage booking page
     return render(request, 'manage_booking.html', {'booking': booking})

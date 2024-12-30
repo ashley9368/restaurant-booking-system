@@ -33,4 +33,4 @@ def make_booking(request):
 # If its not a POST request display empty form
     else: form = TableBookingForm()
 # Load the booking.html template with the form
-    return render(request, 'manage_booking.html', {'form': form})
+    return render(request, 'booking.html', {'form': form})
