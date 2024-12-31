@@ -46,18 +46,33 @@
 <main>
     <div class="booking-details">
         <h2>Manage Your Booking</h2>
+
+        <!-- Show booking details when not editing -->
+        {% if not editing %}
         <p>Name: {{ booking.first_name }} {{ booking.last_name }}</p>
         <p>Email: {{ booking.email }}</p>
         <p>Date: {{ booking.date }}</p>
         <p>Time: {{ booking.time }}</p>
         <p>Guests: {{ booking.guests }}</p>
-    </div>
 
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" name="edit" class="btn btn-primary">Edit Booking</button>
-        <button type="Submit" name="delete_booking" class="btn btn-delete">Delete Booking</button>
-    </form>
+        <!-- Buttons for editing and deleting -->
+        <form method="post">
+            {% csrf_token %} <!-- CSRF to secure form attacks -->
+            <button type="Submit" name="edit" class="btn btn-primary">Edit Booking</button>
+            <button type="Submit" name="delete_booking" class="btn btn-delete">Delete Booking</button>
+        </form>
+        {% endif %}
+
+        <!-- Show the form and buttons when editing booking -->
+        {% if editing %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="save_changes" class="btn btn-primary">Save Changes</button>
+            <button type="submit" name="cancel_edit" class="btn btn-secondary">Cancel</button>
+        </form>
+        {% endif %}
+    </div>
 </main>
 
 <!-- Footer Section -->
