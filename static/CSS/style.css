@@ -16,7 +16,10 @@
 }
 
 .menu-container {
-    position: relative;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    z-index: 1000;
 }
 
 /* Hamburger Menu positioning and styles */
@@ -25,11 +28,7 @@
     border: none;
     cursor: pointer;
     font-size: 30px;  
-    color: #ffffff;   
-    position: absolute;
-    top: -60px;      
-    left: 10px;      
-    z-index: 10;     
+    color: #ffffff;
 }
 
 /* Login/Signup/account status dropdown menu */
@@ -43,9 +42,9 @@
 
 .menu-container-account {
     position: absolute;
-    top: 40px;       
-    right: 20px;     
-    z-index: 10;    
+    top: 35px;       
+    right: 35px;     
+    z-index: 1000;    
 }
 
 .menu-toggle-account {
