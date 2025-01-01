@@ -69,14 +69,17 @@ body {
 min-height: 100vh; 
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    /* Background Image */
-    background-image: url("{% static 'core/images/background-image.jpeg' %}");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Background Image */
+background-image: url("{% static 'core/images/background-image.jpeg' %}");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
+/* Center and position main content information */
 main {
     flex: 1; /* Takes all remaining space, pushing footer down */
     display: flex;
@@ -86,6 +89,40 @@ main {
     height: 100%;              /* Ensures main takes up available space */
     margin: 0;
     padding: 0;
+}
+
+/* Booking Details for booking page */
+.booking-details {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #5280ff;
+    padding: 12px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+/* manage booking button */
+.manage-booking {
+    padding: 20px;
+}
+
+/* Booking deleted successfully and Booking Successful */
+ul.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+ul.messages li {
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px 0;
 }
 
 /* Main buttons for hompeage (book a table/ view our menu */
