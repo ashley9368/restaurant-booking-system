@@ -1,0 +1,165 @@
+/* Header Area */
+.heading {
+    text-align: center;
+    font-size: 36px;
+    flex: 1;
+    color: #ffffff;
+}
+
+/* Hamburger Menu for navigation */
+.menu-items {
+    display: none;
+}
+
+.menu-items.visible {
+    display: block;
+}
+
+.menu-container {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    z-index: 1000;
+}
+
+/* Hamburger Menu positioning and styles */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;  
+    color: #ffffff;
+}
+
+/* Login/Signup/account status dropdown menu */
+.login-signup {
+    display: none;
+}
+
+.login-signup.visible {
+    display: block;
+}
+
+.menu-container-account {
+    position: absolute;
+    top: 35px;       
+    right: 35px;     
+    z-index: 1000;    
+}
+
+.menu-toggle-account {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-toggle-account i {
+    font-size: 30px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+/* Main Content */
+body {
+min-height: 100vh; 
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+/* Background Image */
+background-image: url("{% static 'core/images/background-image.jpeg' %}");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+/* Center and position main content information */
+main {
+    flex: 1; /* Takes all remaining space, pushing footer down */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;   /* Centers them vertically */
+    align-items: center;       /* Centers them horizontally */
+    height: 100%;              /* Ensures main takes up available space */
+    margin: 0;
+    padding: 0;
+}
+
+/* Booking Details for booking page */
+.booking-details {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #5280ff;
+    padding: 12px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+/* manage booking button */
+.manage-booking {
+    padding: 20px;
+}
+
+/* Booking deleted successfully and Booking Successful */
+ul.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+ul.messages li {
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Main buttons for hompeage (book a table/ view our menu */
+.btn {
+    margin: 0.5em 0;          
+    background-color: #8697C4;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1em;
+    background-color: #8697C4;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.footer-section {
+    width: 45%;
+}
+
+/* SIGNUP PAGE */
+.signup-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none; /* removes black dots next to social icons (and opening times)*/
+}

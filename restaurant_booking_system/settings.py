@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 import dj_database_url
+
 if os.path.isfile('env.py'):
     import env
 
@@ -30,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-ashley9368-restaurantbo-ea4vxr0qerx.ws.codeinstitute-ide.net',
+    '8000-ashley9368-restaurantbo-1qhyivjem6c.ws-eu117.gitpod.io',
     'restaurant-booking-project-3f4ea4b60766.herokuapp.com'
 ]
 
@@ -97,7 +98,9 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
-    "https://*.herokuapp.com"
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com",
+    "https://restaurant-booking-project-3f4ea4b60766.herokuapp.com",
 ]
 
 # Password validation
