@@ -9,6 +9,7 @@ def manage_booking(request):
     # Get the user's booking from the database
     booking = TableBooking.objects.filter(user=request.user).first()
     editing = False # Checks if the user is editing their booking
+    form = None
 
     if not booking: # If no booking exists, redirect user to the booking page
         return redirect('make_booking')
@@ -34,11 +35,11 @@ def manage_booking(request):
                 messages.success(request, 'Booking updated successfully!')
                 return redirect('manage_booking') 
 
-            elif 'cancel_edit' in request.POST:
-                # Exit edit mode without saving (if user clicks cancel button)
-                return redirect('manage_booking')
-    else:
-        # Show the booking details
+        elif 'cancel_edit' in request.POST:
+            # Exit edit mode without saving (if user clicks cancel button)
+            return redirect('manage_booking')
+
+    if form is None:
         form = TableBookingForm(instance=booking)
 
 
