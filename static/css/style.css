@@ -34,6 +34,15 @@
 /* Login/Signup/account status dropdown menu */
 .login-signup {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #5280ff;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px
 }
 
 .login-signup.visible {
