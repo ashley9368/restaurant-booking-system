@@ -9,7 +9,7 @@ def manage_booking(request):
     # Get the user's booking from the database
     booking = TableBooking.objects.filter(user=request.user).first()
     editing = False # Checks if the user is editing their booking
-    form = None
+    form = None # Start with no form
 
     if not booking: # If no booking exists, redirect user to the booking page
         return redirect('make_booking')
