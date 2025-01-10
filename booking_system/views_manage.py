@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from .models import TableBooking
+from .models import TableBooking, Table
 from .forms import TableBookingForm
 from django.contrib import messages # Import messages to display feedback to the user
 
@@ -16,8 +16,13 @@ def manage_booking(request):
 
     # Check if the request is a POST (user clicks button)
     if request.method == "POST":
-        if 'delete_booking' in request.POST: 
-            # If the user clicked delete booking deleted their booking
+        if 'delete_booking' in request.POST:
+            tables_to_update = list(booking.tables.all())
+            for table in booking.tables.all():
+                table.status = 'available'
+                table.save()
+
+            # Delete the booking
             booking.delete()
             messages.success(request, 'Booking deleted successfully!')
             return redirect('make_booking') # redirect them to make a new booking
