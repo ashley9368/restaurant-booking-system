@@ -19,12 +19,12 @@ def allocate_tables(guests, date, time):
         if total_capacity < guests: # Check if more seats are still needed
             allocated_tables.append(table) # Add the table to the booking list
             total_capacity += table.capacity # Update the total capacity with this table's seats
-            table.status = 'booked' # Mark the table as booked
-            table.save() # Save the updated status to the database
+
         if total_capacity >= guests: # Check if the required number of seats is reached
             return allocated_tables # Return the list of allocated tables
-            # If no combination of tables meets the amount needed, return none
-        return None 
+
+    # If no combination of tables meets the amount needed, return none
+    return None 
 
 
 # Booking view
@@ -60,6 +60,11 @@ def make_booking(request):
                 # Save the booking to the database
                 booking.save()
                 booking.tables.set(allocated_tables)
+
+                for table in allocated_tables:
+                    table.status = 'booked'
+                    table.save()
+                
                 # Add message to say booking successful
                 messages.success(request, 'Booking Successful!')
                 return redirect('make_booking') # Redirect to booking page to allow user to make a new booking
