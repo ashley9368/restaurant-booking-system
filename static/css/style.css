@@ -13,7 +13,7 @@
     top: 50px;
     left: 10px;
     background-color: #ffffff;
-    border: 1px solid #5280ff;
+    border: 1px solid #8697C4;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -56,7 +56,7 @@
     top: 100%;
     right: 0;
     background-color: #ffffff;
-    border: 1px solid #5280ff;
+    border: 1px solid #8697C4;
     border-radius: 4px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -121,7 +121,7 @@ main {
 .booking-details {
     color: #ffffff;
     font-weight: bold;
-    background-color: #5280ff;
+    background-color: #8697C4;
     padding: 12px;
     border-radius: 20px;
     text-align: center;
@@ -149,6 +149,31 @@ ul.messages li {
     text-align: center;
     font-weight: bold;
     margin: 5px 0;
+}
+
+/* Booking form styling */
+.form-wrapper {
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #8697C4;
+    border-radius: 20px;
+    padding: 5px 5px 20px 20px;
+}
+
+.book-table-btn {
+    display: block; 
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #8697C4;
+    cursor: pointer;
+}
+
+.book-table-btn:hover {
+    background-color: #5280ff;
 }
 
 /* Main buttons for hompeage (book a table/ view our menu */
