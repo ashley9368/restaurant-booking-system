@@ -195,54 +195,85 @@ ul.messages li {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
     box-sizing: border-box;
+    gap: 10px;
 }
-
+/* footer content container */
 .footer-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 20px;
+    gap: 5%;
 }
 
+/* opening-times section styles */
 .opening-times {
-    text-align: left;
+    flex: 1;
+    max-width: 45%;
 }
 
 .opening-times h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .opening-times p {
     margin: 5px 0 0;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
+/* Socail Media section container */
 .social-media {
+    flex: 1;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
 }
 
+/* Heading inside the Social media section */
 .social-media h3 {
     margin: 0;
-    font-size: 18px
+    font-size: 18px;
+    font-weight: bold;
+}
+/* social media links */
+.social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 3px;
 }
 
-.social-media a img {
-    width: 24px;
-    height: 24px;
+/* hover effect */
+.social-media a:hover {
+    color: #5280ff;
 }
 
+/* Social media icon styling */
+.social-media a i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+/* Social media text sizes */
+.social-media a span {
+    font-size: 18px;
+}
 
 /* SIGNUP PAGE */
 .signup-title {
