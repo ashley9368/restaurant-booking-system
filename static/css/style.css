@@ -4,6 +4,7 @@
     font-size: 36px;
     flex: 1;
     color: #ffffff;
+    border-radius: 8px;
 }
 
 /* Hamburger Menu for navigation */
@@ -115,6 +116,7 @@ main {
     height: 100%;              /* Ensures main takes up available space */
     margin: 0;
     padding: 0;
+    margin-top: -200px;
 }
 
 /* Booking Details for booking page */
@@ -246,7 +248,7 @@ ul.messages li {
 /* Heading inside the Social media section */
 .social-media h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
 }
 /* social media links */
