@@ -32,7 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-ashley9368-restaurantbo-1qhyivjem6c.ws-eu117.gitpod.io',
-    'restaurant-booking-project-3f4ea4b60766.herokuapp.com'
+    'restaurant-booking-project-3f4ea4b60766.herokuapp.com',
+    'localhost'
 ]
 
 

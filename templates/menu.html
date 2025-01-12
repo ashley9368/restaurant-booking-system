@@ -44,42 +44,7 @@
 </header>
 <!-- Main Area on page -->
 <main>
-    {% if messages %}
-    <!-- Checks if there is message to display -->
-    <ul class="messages">
-        {% for message in messages %}
-        <li class="{{ message.tags }}">{{ message }}</li> <!-- Display the success message -->
-        {% endfor %}
-        <!-- End the if statement -->
-    </ul>
-    {% endif %}
 
-
-    {% if booking %}
-    <!-- User booking information area -->
-    <div class="booking-details">
-        <h2>Your Booking Information</h2>
-        <p>Name: {{ booking.first_name }} {{ booking.last_name }}</p>
-        <p>Email: {{ booking.email }}</p>
-        <p>Date: {{ booking.date }}</p>
-        <p>Time: {{ booking.time }}</p>
-        <p>Guests: {{ booking.guests }}</p>
-    </div>
-
-    <div class="manage-booking">
-        <!-- Button for user to manage booking-->
-        <a href="{% url 'manage_booking' %}" class="btn btn-primary">Manage Booking</a>
-    </div>
-    {% else %}
-    <form method="post">
-        {% csrf_token %}
-        <!-- Adds security to Protect the form from CSRF attacks -->
-        <div class="form-wrapper">
-            {{ form.as_p }}
-            <button type="submit" class="book-table-btn">Book Table</button>
-        </div>
-    </form>
-    {% endif %}
 </main>
 
 <!-- Footer Section -->
