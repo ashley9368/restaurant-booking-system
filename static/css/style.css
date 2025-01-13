@@ -118,7 +118,7 @@ main {
     height: 100%;              /* Ensures main takes up available space */
     margin: 0;
     padding: 0;
-    margin-top: -200px;
+    padding-bottom: 200px;
 }
 
 /* Booking Details for booking page */
@@ -180,7 +180,7 @@ ul.messages li {
     background-color: #5280ff;
 }
 
-/* Main buttons for hompeage (book a table/ view our menu */
+/* Main buttons for homepage (book a table/ view our menu */
 .btn {
     margin: 0.5em 0;          
     background-color: #8697C4;
@@ -190,6 +190,34 @@ ul.messages li {
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
+}
+
+/* Menu Page Styling */
+.menu-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8697C4;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.menu-item p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 /* Footer */
