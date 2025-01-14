@@ -45,7 +45,7 @@ def make_booking(request):
         # Check if the form data is valid
         if form.is_valid():
             # Get the number of guests from the form
-            guests = form.cleaned_data['guests']
+            guests = int(form.cleaned_data['guests'])
             # Get the date from the form
             date = form.cleaned_data['date']
             # Get the time from the form
