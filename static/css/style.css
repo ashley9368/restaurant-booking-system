@@ -203,12 +203,14 @@ ul.messages li {
     border-radius: 20px;
 }
 
+/* Menu item name */
 .menu-item h3 {
     margin: 0;
     font-size: 20px;
     color: #ffffff;
 }
 
+/* Description of menu item */
 .menu-item p {
     margin: 0;
     font-size: 18px;
