@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from .models import TableBooking, Table
 from .forms import TableBookingForm
 from django.contrib import messages # Import messages to display feedback to the user
+from django.contrib.messages import get_messages
 
 @login_required # Ensure the user is logged in
 def manage_booking(request):
@@ -36,7 +37,7 @@ def manage_booking(request):
             # Save the updated booking
             form = TableBookingForm(request.POST, instance=booking)
             if form.is_valid():
-                form.save() 
+                form.save()
                 messages.success(request, 'Booking updated successfully!')
                 return redirect('manage_booking') 
 
