@@ -1,5 +1,7 @@
 from django import forms
 from .models import TableBooking
+from django.core.exceptions import ValidationError
+from django.utils.timezone import now
 
 class TableBookingForm(forms.ModelForm):
     class Meta:
@@ -27,3 +29,9 @@ class TableBookingForm(forms.ModelForm):
             ], 
             label="Guests" #
         )
+
+    def clean_date(self):
+        selected_date = self.cleaned_data.get('date')
+        if selected_date and selected_date < now().date():
+            raise ValidationError("You cannot book a table in the past.")
+        return selected_date

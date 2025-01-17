@@ -159,6 +159,18 @@ ul.messages li {
     padding: 3px;
     border-radius: 5px;
 }
+/* Error message for user trying to book in the past */
+.errorlist {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.errorlist li {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18x;
+}
 
 /* Booking form styling */
 .form-wrapper {
