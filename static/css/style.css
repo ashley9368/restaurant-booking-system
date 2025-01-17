@@ -79,19 +79,21 @@
     z-index: 1000;    
 }
 
+/* Login icon (top right) */
 .menu-toggle-account {
     background: none;
-    border: none;
+    border: 2px solid #8697C4;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 30px;
     color: #ffffff;
-    padding: 0;
+    padding: 5px;
     margin: 0;
 }
 
 .menu-toggle-account i {
     font-size: 30px;
-    color: #ffffff;
+    color: #FFFFFF;
     vertical-align: middle;
 }
 

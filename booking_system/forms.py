@@ -31,6 +31,10 @@ class TableBookingForm(forms.ModelForm):
         )
 
     def clean_date(self):
+        """
+        Validate that the selected date is not in the past,
+        and prevent the user from booking a table in the past.
+        """
         selected_date = self.cleaned_data.get('date')
         if selected_date and selected_date < now().date():
             raise ValidationError("You cannot book a table in the past.")
