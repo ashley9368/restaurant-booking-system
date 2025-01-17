@@ -24,7 +24,6 @@ from . import views
 urlpatterns = [
     path('', views.homepage, name='homepage'), # The Home Page
     path('accounts/', include('customer_accounts.urls')), # Add all customer_accounts URLs
-    path('dashboard/', include('admin_dashboard.urls')), # The Admin Dashboard
     path('make/', booking_views.make_booking, name='make_booking'), # The Booking page
     path('manage/', manage_booking, name='manage_booking'), # The Booking page
     path('menu/', views.menu, name='menu'),
