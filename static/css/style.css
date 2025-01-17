@@ -323,8 +323,8 @@ ul {
     list-style-type: none; /* removes black dots next to social icons (and opening times)*/
 }
 
-/* Hide the hamburger menu on larger screens (Desktop: 1024px and up) */
-@media (min-width:1024px) {
+/* Hide the hamburger menu on larger screens (Desktop: 1077px and up) */
+@media (min-width:1077px) {
     .menu-toggle {
         display: none; /* Hide hamburger icon */
 }
@@ -341,9 +341,11 @@ ul {
 }
 
 .menu-items a {
-    margin: 0 15px; /*Space out menu items */
+    margin: 8px 15px; /*Space out menu items */
     color: #ffffff;
     font-size: 18px;
-    background-color: #8697C4
+    background-color: #8697C4;
+    border-radius: 10px;
+    padding: 4px;
 }
 }
