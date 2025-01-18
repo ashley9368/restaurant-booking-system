@@ -1,0 +1,372 @@
+# Table & Vine
+
+### My Restaurant Booking system
+
+![Table & Vine](static/images/am-i-responsive.png)
+
+Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
+___
+
+Table & Vine is a restaurant booking website that allows customers to reserve a table for a specific date and time. They can also bring their friends along and explore the menu in advance to decide if it's the perfect spot for their booking.
+
+Table & Vine is a full-stack restaurant booking system that allows users to reserve tables, create an account, and manage their bookings. Customers can also explore the menu and plan their visit with friends.
+
+Link to live site - https://restaurant-booking-project-3f4ea4b60766.herokuapp.com/
+
+## CONTENTS
+
+  - [Site Objectives](#site-objectives)
+- [User Experience/UX](#user-experienceux)
+  - [Target Audience](#target-audience)
+  - [User Stories](#user-stories)
+    - [New Visitor Goals](#new-visitor-goals)
+    - [Existing Visitor Goals](#existing-visitor-goals)
+- [Design Choices](#design-choices)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Logo and Favicon](#logo-and-favicon)
+  - [Wireframes](#wireframes)
+  - [Database Plan](#database-plan)
+- [Features](#features)
+  - [Registration](#registration)
+  - [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Programming Languages, Frameworks and Libraries Used](#programming-languages-frameworks-and-libraries-used)
+- [Agile](#agile)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [User](#user) 
+  - [Bugs](#bugs)
+  - [Lighthouse](#lighthouse) *
+  - [Validation Testing](#validation-testing) *
+    - [HTML \& CSS](#html--css) *
+  - [Python Testing](#python-testing) *
+  - [Deployment](#deployment) *
+    - [Github Deployment](#github-deployment) *
+    - [Creating a Fork or Copying](#creating-a-fork-or-copying) *
+    - [Clone](#clone) *
+    - [Repository deployment via Heroku](#repository-deployment-via-heroku) *
+    - [Deployment of the app](#deployment-of-the-app) *
+  - [Credits](#credits) *
+  - [Media](#media) *
+  - [Acknowledgments and Thanks](#acknowledgments-and-thanks) *
+
+___
+
+## Site Objectives
+
+Build a full-stack restaurant booking system to develop and demonstrate a growing understanding of Django, PostgreSQL, and front-end development.
+
+My three main objectives were:
+
+- ### Create a readable, clean and responsive front end
+
+  I designed a user-friendly interface that is easy to navigate and works across different devices. The front end was built using Django, HTML, and CSS, with a small amount of JavaScript to enhance interactivity and improve the user experience.
+
+- ### Make use of available backend functionality
+
+  The backend framework allows users to create an account, book a table, edit their booking, and delete it if needed. It also ensures double booking prevention and validates user input for a smooth booking experience.
+
+- ### Store data on an external cloud database
+
+  I used NeonDB to store the PostgreSQL database for this project.
+
+___
+
+# User Experience/UX
+
+## Target Audience
+
+- Individuals, couples, and groups who want a seamless way to plan their restaurant visit without hassle.
+
+## User Stories
+
+### New Visitor Goals
+
+- Easily navigate the site with a clear and responsive design.
+- Browse the restaurant menu, including prices and descriptions.
+- View menu categories.
+- Ensure accessibility with descriptive alt text for images.
+- Create an account to book and manage reservations.
+
+### Existing Visitor Goals
+
+- Log in and out of their account.
+- Book a table by selecting a date, time, and number of guests.
+- Show Available Time Slots for Booking
+- Receive confirmation after successfully booking a table.
+- Edit or cancel existing reservations if plans change.
+- Prevent double bookings to avoid conflicts in reservations.
+- Secure login/logout required to view reserved tables.
+
+___
+
+# Design Choices
+
+## Colour Scheme
+
+The project uses soft blue for buttons, headers, and the footer, with white text for readability. This combination creates a simple and modern look while keeping the design clean and easy to navigate.
+
+## Typography
+
+I used poppins for the header across all pages [Poppins](https://fonts.google.com/specimen/Poppins)
+
+## Logo and Favicon
+
+The logo was created using an online logo creator - [favicon](https://favicon.io/)
+
+## Wireframes
+
+- Mobile Homepage Wireframe
+
+![Mobile Homepage Wireframe](static/images/wireframes/phone-home-page.png)
+
+- Mobile Booking Page Wireframe
+
+![Mobile Booking Wireframe](static/images/wireframes/iphone-booking-page.png)
+
+- Mobile Menu Page Wireframe
+
+![Mobile Menu Wireframe](static/images/wireframes/iphone-menu-page.png)
+
+- Desktop Homepage Wireframe
+
+![Desktop Homepage Wireframe](static/images/wireframes/desktop-homepage.png)
+
+- Desktop Booking Wireframe
+
+![Desktop Booking Wireframe](static/images/wireframes/desktop-booking-page.png)
+
+- Desktop Menu Wireframe
+
+![Desktop Menu Wireframe](static/images/wireframes/desktop-menu-page.png)
+
+## Database Plan
+
+This diagram shows how the database is structured for the restaurant booking system.
+
+![Database plan](static/images/erd.png)
+
+# Features
+
+## Registration
+
+The user can create an account (Not the nicest looking signup form currently, but it does serve its purpose)
+
+![Create an Account](static/images/signup.png)
+
+Login Page (Again not the nicest but it does do its job)
+
+![Login Page](static/images/login.png)
+
+View the home page
+
+![View Home Page](static/images/homepage.png)
+
+View Menu 
+
+![View Menu](static/images/menu-page.png)
+
+Make a booking
+
+![Booking Page](static/images/booking.png)
+
+## Future Features
+
+- Style login page
+- Style Signup page
+- User can request a password reset
+- More menu items
+- View Available times
+
+___
+
+# Technologies Used
+
+Here are the technologies used to build this project:
+
+- [VS Code](https://code.visualstudio.com/) To build and create this project
+- [Github](https://github.com) To host and store the data for the site.
+- [Heroku](https://www.heroku.com/) Used to deploy the project.
+- [Flake8 PEP8 Validator](https://flake8.pycqa.org/) Used to check Python code for PEP 8 compliance and errors.
+- [NeonDB](https://neon.tech/) Used to store PostgreSQL database.
+- [Google Fonts](https://fonts.google.com/) Used for Typography.
+- [Font Awesome](https://fontawesome.com/) Used for icons.
+- [Gitpod](https://www.gitpod.io/) Used as an online development environment.
+
+# Programming Languages, Frameworks and Libraries Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Python_basics)
+- [Django](https://www.djangoproject.com/)
+
+# Agile
+
+This project was developed following the Agile methodology, making use of GitHub’s Project Board and Issues sections for task management and tracking.
+
+- [Project Board](https://github.com/users/ashley9368/projects/4)
+
+# Testing
+
+Throughout the development of this project, I tested each feature as I built it to ensure functionality and styling worked correctly. I checked for issues with user authentication, form validation, database interactions, and responsiveness across different screen sizes. I did go back at times to fix issues i felt like would be better to go back to later.
+
+## Manual Testing
+
+## User
+
+| TEST | OUTCOME | PASS/FAIL|
+|:---:|:---:|:---:|
+| User Signup | User successfully registered and added to the database | Pass |
+| User Login | User logged in successfully and redirected correctly | Pass |
+| User Logout | User logged out and session cleared | Pass |
+| Book a table | Booking successfuly created and stored in the database | Pass |
+| Edit a booking | Booking details updated correctly | Pass |
+| Cancel editing a booking | User can exit editing mode without changes being saved | Pass |
+| Delete a booking | Booking successfully removed from the system | Pass |
+| Mobile responsiveness | Booking system and navigation work propery on different screen sizes | Pass |
+
+## Bugs
+
+During the development of this website i had many occasions where bugs would appear or i simply just had typos or just genuinely forgot, They caused issues but i just went back and read what wasn't working line by line to refine the potential issues.
+
+While editing a booking, I realised there was no option to exit without saving changes if i changed my mind. So i added a cancel button that doesn't save changes to the form so the user could exit without hassle.
+
+I encountered an issue where the success messages were not displaying properly when editing the booking and saving the changes. The issue was that i forgot to add the message display logic to the booking.html once i included it the messages appeared as expected.
+
+## Lighthouse
+
+The performance scores appear to be low, and I believe this is due to the images uploaded for each blog post being hosted on a third-party cloud-based platform.
+
+Mobile
+
+![Lighthouse Mobile Score](documentation/images/lighthouse_mobile.png)
+
+Desktop
+
+![Lighthouse Desktop Score](documentation/images/lighthouse_desktop.png)
+
+## Validation Testing
+
+### HTML & CSS
+
+HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
+
+When validating the code, I had the error shown below. this was fixed by removing the button and using Bootstrap styles to display the link as a button instead
+
+![HTML Validation - Descendant Error](documentation/testing_documentation/validation/base.html_button_descendant.png)
+
+Css was tested using the W3C CSS Validation service 
+
+[https://jigsaw.w3.org/css-validator/]
+
+![CSS Validation Complete](static/images/css-validation.png)
+
+## Python Testing
+
+Python pep8 validation was done via [Code Institute's Python Linter](https://pep8ci.herokuapp.com/)
+
+The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but these have now been rectified.
+
+Python Files Tested:
+
+- models
+- forms
+- views
+- urls
+
+___
+
+## Deployment
+
+### Github Deployment
+
+The website was stored using GitHub for storage of data and version control. To do this I did the following;
+
+After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
+
+- git add .
+- git commit -m "meaningful commit message"
+- git push
+
+The files are now available to view within your github repository.
+
+### Creating a Fork or Copying
+
+To clone/fork/copy the repository you click on the fork tab which is situated next to unwatch tab in the top right corner of the page
+
+### Clone
+
+To create a clone you do the following;
+
+1. Click on the code tab, left of the Gitpod tab
+2. To the right of the repository name, click the clipboard icon
+3. In the IED open GitBash
+4. Change the working directory to the location you prefer
+5. Add Git Clone with the copy of the repository name
+6. Clone has been created
+
+### Repository deployment via Heroku
+
+- On the [Heroku Dashboard](https://dashboard.heroku.com) page, click New and then select Create New App from the drop-down menu.
+- When the next page loads insert the App name and Choose a region. Then click 'Create app'
+- In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
+
+1. Cloudinary URL
+2. Postgres Database URL
+3. Port (8000)
+
+- Below this click Add buildpack and choose python and nodejs in that order.
+
+### Deployment of the app
+
+- Click on the Deploy tab and select Github-Connect to Github.
+- Enter the repository name and click Search.
+- Choose the repository that holds the correct files and click Connect.
+- A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
+- Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button which should appear below the build information window, alternatively, there is another button located in the top right of the page.
+
+___
+
+## Credits
+
+This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard blog 'base'. From this base I customised a lot of the layout and styling with Bootstrap and custom CSS. I also added a custom model for Category. This allowed me to create a functionality within the site for users to filter the blog posts by a selected category.
+
+I also added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
+
+For inspiration and fine-tuning of my code, I referred to John Elder's youtube channel [Codemy](https://www.youtube.com/@Codemycom) where I was able to get a better understanding of how to correctly create this type of product using Django and Bootstrap.
+
+The Readme layout was based on the example by [Kera Cudmore - Readme Examples](https://github.com/kera-cudmore/readme-examples/blob/main/README.md?plain=1) and [Sdalsosa - Readme](https://github.com/Sdalsosa/ComposerHub/blob/main/README.md)
+
+The wireframe mockups were created using [Figma](https://https://www.figma.com/)
+
+Once complete, the readme file was passed through a spelling and grammar check via [Grammarly](https://www.grammarly.com/)
+
+___
+
+## Media
+
+For placeholder images when no image is uploaded to blog post, I have used [picsum](https://picsum.photos/) which provides a library of stock images that display as a placeholder.
+
+All other content and images are my own.
+
+___
+
+## Acknowledgments and Thanks
+
+Sean & Oisin at Code Institute's tutor support for the help and guidance with my code-related brain melts.
+
+Rebecca at Code Institute's tutor support for the database reset guidance.
+
+John Elder on the [Codemy](https://www.youtube.com/@Codemycom) youtube channel
+
+For help with manual testing:
+
+- Liz Mayhew
+- Tom Mayhew
+- Nush
+- Marie Daniel
+- Hannah Cook
+- Thomas Spåre
+- Shubham Sinha
