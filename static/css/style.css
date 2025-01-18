@@ -7,6 +7,8 @@
     border-radius: 8px;
     background-color: #8697c4;
     padding: 5px 10px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 700; 
 }
 
 /* Hamburger Menu for navigation */
