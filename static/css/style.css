@@ -81,9 +81,8 @@
 
 /* Login icon (top right) */
 .menu-toggle-account {
-    background: none;
-    border: 2px solid #8697C4;
-    border-radius: 6px;
+    background-color: #8697C4;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 30px;
     color: #ffffff;
