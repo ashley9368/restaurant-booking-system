@@ -37,9 +37,9 @@ Link to live site - https://restaurant-booking-project-3f4ea4b60766.herokuapp.co
   - [Manual Testing](#manual-testing)
   - [User](#user) 
   - [Bugs](#bugs)
-  - [Lighthouse](#lighthouse) *
-  - [Validation Testing](#validation-testing) *
-    - [HTML \& CSS](#html--css) *
+  - [Lighthouse](#lighthouse)
+  - [Validation Testing](#validation-testing)
+    - [HTML \& CSS](#html--css)
   - [Python Testing](#python-testing) *
   - [Deployment](#deployment) *
     - [Github Deployment](#github-deployment) *
@@ -237,15 +237,57 @@ I encountered an issue where the success messages were not displaying properly w
 
 ## Lighthouse
 
-The performance scores appear to be low, and I believe this is due to the images uploaded for each blog post being hosted on a third-party cloud-based platform.
+Mobile Lighthouse Scores
 
-Mobile
+Homepage
 
-![Lighthouse Mobile Score](documentation/images/lighthouse_mobile.png)
+![Lighthouse Homepage Score](static/images/lighthouse-scores/mob-home-lighthouse.png)
 
-Desktop
+Booking
 
-![Lighthouse Desktop Score](documentation/images/lighthouse_desktop.png)
+![Lighthouse Booking Score](static/images/lighthouse-scores/mob-booking-lighthouse.png)
+
+Login
+
+![Lighthouse Login Score](static/images/lighthouse-scores/mob-login-lighthouse.png)
+
+Manage Booking
+
+![Lighthouse Manage Booking Score](static/images/lighthouse-scores/mob-manage-lighthouse.png)
+
+Menu Score
+
+![Lighthouse Menu Score](static/images/lighthouse-scores/mob-menu-lighthouse.png)
+
+Signup Score
+
+![Lighthouse Signup Score](static/images/lighthouse-scores/signup-lighthouse.png)
+
+Desktop Lighthouse Scores
+
+Homepage
+
+![Lighthouse Homepage Score](static/images/lighthouse-scores/desk-homepage-lighthouse.png)
+
+Booking
+
+![Lighthouse Booking Score](static/images/lighthouse-scores/desk-booking-lighthouse.png)
+
+Login
+
+![Lighthouse Login Score](static/images/lighthouse-scores/desk-login-lighthouse.png)
+
+Manage Booking
+
+![Lighthouse Manage Booking Score](static/images/lighthouse-scores/desk-manage-lighthouse.png)
+
+Menu Score
+
+![Lighthouse Menu Score](static/images/lighthouse-scores/desk-menu-lighthouse.png)
+
+Signup Score
+
+![Lighthouse Signup Score](static/images/lighthouse-scores/desk-signup-lighthouse.png)
 
 ## Validation Testing
 
@@ -281,9 +323,9 @@ Css was tested using the W3C CSS Validation service
 
 ## Python Testing
 
-Python pep8 validation was done via [Code Institute's Python Linter](https://pep8ci.herokuapp.com/)
+I validated my python code using Flake8 [Flake8](https://flake8.pycqa.org/en/latest/)
 
-The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but these have now been rectified.
+During the validation, I came across some issues, Like trailing whitespace, lines to long exceeding 79 characters, and unused imports. I have no fixed these errors to make sure the code follows PEP8 standards
 
 Python Files Tested:
 

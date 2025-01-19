@@ -1,45 +1,46 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from .models import TableBooking, Table
+from .models import TableBooking
 from .forms import TableBookingForm
-from django.contrib import messages # Import messages to display feedback to the user
-from django.contrib.messages import get_messages
+from django.contrib import messages
 
-@login_required # Ensure the user is logged in
+
+# Manages user bookings, Allows editing, deleting.
+
+
+@login_required  # Ensure user is logged in
 def manage_booking(request):
     # Get the user's booking from the database
     booking = TableBooking.objects.filter(user=request.user).first()
-    editing = False # Checks if the user is editing their booking
-    form = None # Start with no form
+    editing = False
+    form = None
 
-    if not booking: # If no booking exists, redirect user to the booking page
-        return redirect('make_booking')
+    if not booking:
+        return redirect('make_booking')  # Redirect if no booking exists
 
     # Check if the request is a POST (user clicks button)
     if request.method == "POST":
+        # Free up tables and delete the booking
         if 'delete_booking' in request.POST:
-            tables_to_update = list(booking.tables.all())
             for table in booking.tables.all():
                 table.status = 'available'
                 table.save()
-
-            # Delete the booking
             booking.delete()
             messages.success(request, 'Booking deleted successfully!')
-            return redirect('make_booking') # redirect them to make a new booking
+            return redirect('make_booking')
 
+        # Edit booking function
         elif 'edit' in request.POST:
-            # If the user clicked the Edit booking button, enter edit mode
             editing = True
-            form = TableBookingForm(instance=booking) # Show existing booking details
+            form = TableBookingForm(instance=booking)
 
+        # Save the updated booking
         elif 'save_changes' in request.POST:
-            # Save the updated booking
             form = TableBookingForm(request.POST, instance=booking)
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Booking updated successfully!')
-                return redirect('manage_booking') 
+                return redirect('manage_booking')
 
         elif 'cancel_edit' in request.POST:
             # Exit edit mode without saving (if user clicks cancel button)
@@ -48,10 +49,9 @@ def manage_booking(request):
     if form is None:
         form = TableBookingForm(instance=booking)
 
-
-    # Render the manage booking page
+    # Render the manage booking page with booking details.
     return render(request, 'manage_booking.html', {
-        'booking': booking, # The users booking details
-        'form': form, # The form to edit the booking
-        'editing': editing # Weather the user is in edit mode
+        'booking': booking,
+        'form': form,
+        'editing': editing
     })

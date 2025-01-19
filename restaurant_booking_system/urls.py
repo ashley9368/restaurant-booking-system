@@ -17,15 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from booking_system import views as booking_views
-from customer_accounts import views as accounts_views
 from booking_system.views_manage import manage_booking
 from . import views
 
 urlpatterns = [
-    path('', views.homepage, name='homepage'), # The Home Page
-    path('accounts/', include('customer_accounts.urls')), # Add all customer_accounts URLs
-    path('make/', booking_views.make_booking, name='make_booking'), # The Booking page
-    path('manage/', manage_booking, name='manage_booking'), # The Booking page
+    path('', views.homepage, name='homepage'),
+    path('accounts/', include('customer_accounts.urls')),
+    path('make/', booking_views.make_booking, name='make_booking'),
+    path('manage/', manage_booking, name='manage_booking'),
     path('menu/', views.menu, name='menu'),
     path('admin/', admin.site.urls),
 ]

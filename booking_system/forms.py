@@ -3,21 +3,27 @@ from .models import TableBooking
 from django.core.exceptions import ValidationError
 from django.utils.timezone import now
 
+# Creates the table booking form, allowing users to enter their booking details
+
+
 class TableBookingForm(forms.ModelForm):
     class Meta:
         model = TableBooking
         fields = ['date', 'time', 'guests', 'first_name', 'last_name', 'email']
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date'}), 
-            'time': forms.Select(choices=TableBooking._meta.get_field('time').choices),
+            'date': forms.DateInput(attrs={'type': 'date'}),
+            'time': forms.Select(
+                choices=TableBooking._meta.get_field('time').choices),
         }
-    
+
+    # Sets up the form using the parent class
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         # Change the 'guests' field to a dropdown
         self.fields['guests'] = forms.ChoiceField(
-            choices= [ 
+            choices=[
                 (1, '1'),
                 (2, '2'),
                 (3, '3'),
@@ -26,8 +32,8 @@ class TableBookingForm(forms.ModelForm):
                 (6, '6'),
                 (7, '7'),
                 (8, '8'),
-            ], 
-            label="Guests" #
+            ],
+            label="Guests"
         )
 
     def clean_date(self):
