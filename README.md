@@ -40,14 +40,14 @@ Link to live site - https://restaurant-booking-project-3f4ea4b60766.herokuapp.co
   - [Lighthouse](#lighthouse)
   - [Validation Testing](#validation-testing)
     - [HTML \& CSS](#html--css)
-  - [Python Testing](#python-testing) *
-  - [Deployment](#deployment) *
-    - [Github Deployment](#github-deployment) *
-    - [Creating a Fork or Copying](#creating-a-fork-or-copying) *
-    - [Clone](#clone) *
-    - [Repository deployment via Heroku](#repository-deployment-via-heroku) *
-    - [Deployment of the app](#deployment-of-the-app) *
-  - [Credits](#credits) *
+  - [Python Testing](#python-testing)
+  - [Deployment](#deployment)
+    - [Github Deployment](#github-deployment)
+    - [Creating a Fork or Copying](#creating-a-fork-or-copying)
+    - [Clone](#clone)
+    - [Repository deployment via Heroku](#repository-deployment-via-heroku)
+    - [Deployment of the app](#deployment-of-the-app)
+  - [Credits](#credits)
   - [Media](#media)
   - [Acknowledgments and Thanks](#acknowledgments-and-thanks)
 
@@ -340,15 +340,15 @@ ___
 
 ### Github Deployment
 
-The website was stored using GitHub for storage of data and version control. To do this I did the following;
+The website was stored on GitHub for data storage and version control. To achieve this, I followed these steps:
 
-After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
+After adding, modifying, or removing code, I used the terminal in my IDE (Gitpod for this project) and ran the following commands:
 
 - git add .
 - git commit -m "meaningful commit message"
 - git push
 
-The files are now available to view within your github repository.
+This made sure that all changes were saved and made available in my GitHub repository.
 
 ### Creating a Fork or Copying
 
@@ -358,48 +358,53 @@ To clone/fork/copy the repository you click on the fork tab which is situated ne
 
 To create a clone you do the following;
 
-1. Click on the code tab, left of the Gitpod tab
-2. To the right of the repository name, click the clipboard icon
-3. In the IED open GitBash
-4. Change the working directory to the location you prefer
-5. Add Git Clone with the copy of the repository name
-6. Clone has been created
+1. Go to the github repository you want to clone.
+2. Click the code button near the top right of the repository page.
+3. Copy the repository URL by clicking the clipboard icon.
+4. Open gitpod and open a new terminal
+5. Type git clone (Then the repository url)
+6. Type cd (repository name) to open the cloned project
 
 ### Repository deployment via Heroku
 
 - On the [Heroku Dashboard](https://dashboard.heroku.com) page, click New and then select Create New App from the drop-down menu.
 - When the next page loads insert the App name and Choose a region. Then click 'Create app'
-- In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
+- In the settings tab click on Reveal Config Vars and add the following credentials. The credentials for this app are:
 
-1. Cloudinary URL
-2. Postgres Database URL
-3. Port (8000)
-
-- Below this click Add buildpack and choose python and nodejs in that order.
+1. DATABASE_URL
+2. SECRET_KEY
+3. DISABLE_COLLECTSTATIC
 
 ### Deployment of the app
 
-- Click on the Deploy tab and select Github-Connect to Github.
-- Enter the repository name and click Search.
-- Choose the repository that holds the correct files and click Connect.
-- A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
-- Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button which should appear below the build information window, alternatively, there is another button located in the top right of the page.
-
+- Go to the deploy tab and select github as the deployment method.
+- Connect your github account and search for your repository.
+- Select the repository that contains the project files and click connect.
+- Choose manual deployment to deploy when you want to.
+- Click deploy to start building the app
+- Once the deployment has finished click open app
 ___
 
 ## Credits
 
-This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard blog 'base'. From this base I customised a lot of the layout and styling with Bootstrap and custom CSS. I also added a custom model for Category. This allowed me to create a functionality within the site for users to filter the blog posts by a selected category.
+Django Documentation And Python Documentation: The official Django and Python documentation was incredibly helpful during the build of this project [Django](https://docs.djangoproject.com/en/4.2/)
 
-I also added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
+- https://docs.djangoproject.com/en/4.2/topics/db/models/
+- https://docs.djangoproject.com/en/4.2/topics/forms/
+- https://docs.djangoproject.com/en/4.2/topics/http/views/
+- https://docs.python.org/3/tutorial/controlflow.html#defining-functions
+- https://docs.djangoproject.com/en/4.2/topics/auth/default/
+- https://docs.djangoproject.com/en/4.2/topics/db/queries/
+- https://www.youtube.com/watch?v=s5xbtuo9pR0&t=267s
+- https://www.w3schools.com/howto/howto_js_dropdown.asp#:~:text=Example%20Explained,dropdown%20menu%20correctly%20with%20CSS.
 
-For inspiration and fine-tuning of my code, I referred to John Elder's youtube channel [Codemy](https://www.youtube.com/@Codemycom) where I was able to get a better understanding of how to correctly create this type of product using Django and Bootstrap.
+To help me gain a better understanding on erds
 
-The Readme layout was based on the example by [Kera Cudmore - Readme Examples](https://github.com/kera-cudmore/readme-examples/blob/main/README.md?plain=1) and [Sdalsosa - Readme](https://github.com/Sdalsosa/ComposerHub/blob/main/README.md)
+- https://www.youtube.com/watch?v=xsg9BDiwiJE
 
-The wireframe mockups were created using [Figma](https://https://www.figma.com/)
+The Readme layout was based on the example by [Readme Example](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md)
 
-Once complete, the readme file was passed through a spelling and grammar check via [Grammarly](https://www.grammarly.com/)
+The wireframe mockups were created using [Balsamiq](https://balsamiq.com/)
 
 ___
 
