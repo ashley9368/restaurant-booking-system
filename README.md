@@ -48,8 +48,8 @@ Link to live site - https://restaurant-booking-project-3f4ea4b60766.herokuapp.co
     - [Repository deployment via Heroku](#repository-deployment-via-heroku) *
     - [Deployment of the app](#deployment-of-the-app) *
   - [Credits](#credits) *
-  - [Media](#media) *
-  - [Acknowledgments and Thanks](#acknowledgments-and-thanks) *
+  - [Media](#media)
+  - [Acknowledgments and Thanks](#acknowledgments-and-thanks)
 
 ___
 
@@ -253,9 +253,25 @@ Desktop
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
-When validating the code, I had the error shown below. this was fixed by removing the button and using Bootstrap styles to display the link as a button instead
+Homepage w3c validation
+![HTML Validation - Homepage](static/images/homepage-w3c.png)
 
-![HTML Validation - Descendant Error](documentation/testing_documentation/validation/base.html_button_descendant.png)
+Booking w3c validation
+![HTML Validation - Booking](static/images/booking-w3c.png)
+
+Login w3c validation
+![HTML Validation - Login](static/images/login-w3c.png)
+
+Manage Booking w3c validation
+![HTML Validation - Manage Booking](static/images/manage-booking-w3c.png)
+
+Menu w3c validation
+![HTML Validation - Menu](static/images/menu-w3c.png)
+
+There is one error on the signup page related to {{ form.as_p }}, But i am not sure how to fix it.
+
+Signup w3c validation
+![HTML Validation - Signup](static/images/signup-w3c-1-error.png)
 
 Css was tested using the W3C CSS Validation service 
 
@@ -347,26 +363,14 @@ ___
 
 ## Media
 
-For placeholder images when no image is uploaded to blog post, I have used [picsum](https://picsum.photos/) which provides a library of stock images that display as a placeholder.
+I only used one image for my website, Which was the background for the restaurant.
 
-All other content and images are my own.
+[Background Image](https://unsplash.com/photos/a-restaurant-filled-with-wooden-tables-and-chairs-vDlt9BQND-o)
 
 ___
 
 ## Acknowledgments and Thanks
 
-Sean & Oisin at Code Institute's tutor support for the help and guidance with my code-related brain melts.
-
-Rebecca at Code Institute's tutor support for the database reset guidance.
-
-John Elder on the [Codemy](https://www.youtube.com/@Codemycom) youtube channel
-
-For help with manual testing:
-
-- Liz Mayhew
-- Tom Mayhew
-- Nush
-- Marie Daniel
-- Hannah Cook
-- Thomas Spåre
-- Shubham Sinha
+- Jubril Akolade / My Mentor
+- Roman / Code Institute Tutor
+- Rebecca / Code Institute Tutor

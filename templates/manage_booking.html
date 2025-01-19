@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,24 +7,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Table & Vine</title>
+
     <!-- Link css -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- Link font awesome to my homepage -->
+    <!-- Link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon_io/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon_io/favicon-16x16.png' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon_io/apple-touch-icon.png' %}">
-<title>Table & Vine</title>
 </head>
 
 <body style="background-image: url('{% static 'images/background-img.avif' %}');">
+        <!-- Visually Hidden Description for Screen Readers -->
+        <div class="sr-only">
+            A modern restaurant with warm wooden seating.
+        </div>
     <header>
         <h1 class="heading">BOOKING PAGE</h1>
-</body>
-<!-- Hamburger menu for user to click to view options for website -->
+
+<!-- Hamburger menu /for moblie/ navigation for desktop for user to click to view options for website -->
 <div class="menu-container">
     <button class="menu-toggle" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
@@ -34,32 +40,32 @@
         <a href="{% url 'signup' %}">Sign Up</a>
     </div>
 </div>
+
 <!-- Login/signup/ dropdownmenu -->
 <div class="menu-container-account">
     <button class="menu-toggle-account" onclick="toggleAccountMenu()">
         <i class="fas fa-user"></i>
     </button>
     <div id="account-dropdown" class="login-signup">
-        {% if user.is_authenticated %}
+        {% if user.is_authenticated %} <!--Checks if user is logged in -->
         <p class="Welcome-message">Welcome, {{ user.username }}</p>
         <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
+        {% else %} <!-- If user is not logged in-->
         <a href="{% url 'login' %}">Login</a>
         <a href="{% url 'signup' %}">Signup</a>
-        {% endif %}
+        {% endif %} <!-- End authentication check -->
     </div>
 </div>
 </header>
+
 <!-- Main Area on page -->
 <main>
 
-    {% if messages %}
-    <!-- Checks if there is message to display -->
+    {% if messages %} <!-- Check if there are any messages to display -->
     <ul class="messages">
         {% for message in messages %}
-        <li class="{{ message.tags }}">{{ message }}</li> <!-- Display the success message -->
-        {% endfor %}
-        <!-- End the if statement -->
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %} <!-- End the if statement -->
     </ul>
     {% endif %}
     
@@ -76,7 +82,7 @@
 
         <!-- Buttons for editing and deleting -->
         <form method="post">
-            {% csrf_token %} <!-- CSRF to secure form attacks -->
+            {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
             <button type="Submit" name="edit" class="btn btn-primary">Edit Booking</button>
             <button type="Submit" name="delete_booking" class="btn btn-delete">Delete Booking</button>
         </form>
@@ -102,7 +108,7 @@
             <p>12pm until 9pm</p>
         </div>
         <div class="social-media">
-            <h3 class="find us">How to find us</h3>
+            <h3 class="find-us">How to find us</h3>
             <a href="https://facebook.com" target="_blank" rel="noopener"
                 aria-label="Visit our Facebook page (Opens a new tab)">
                 <i class="fa-brands fa-facebook"></i>
@@ -122,5 +128,5 @@
     </div>
 </footer>
 <script src="{% static 'js/script.js' %}"></script> <!-- Links JS -->
-
+</body>
 </html>

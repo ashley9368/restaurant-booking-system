@@ -341,6 +341,15 @@ ul {
     list-style-type: none; /* removes black dots next to social icons (and opening times)*/
 }
 
+/* Hides content visually but keeps it readable for screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
 /* Hide the hamburger menu on larger screens (Desktop: 1077px and up) */
 @media (min-width:1077px) {
     .menu-toggle {
