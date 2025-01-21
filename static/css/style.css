@@ -346,7 +346,6 @@ ul {
     width: 300px;
     margin: 50px auto;
     padding: 10px;
-    background: #8697C4;
     border-radius: 10px;
     text-align: center;
 }
@@ -389,19 +388,13 @@ ul {
     margin-right: auto; /* Pushes it from the right */
 }
 
-form p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
 /* Target username and password in login form */
 #id_username, #id_password {
     margin: 10px auto;
+}
+
+.signup-background {
+    background-color: #8697C4;
 }
 
 /* Hides content visually but keeps it readable for screen readers */
