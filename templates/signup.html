@@ -2,34 +2,39 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Table & Vine | Signup</title>
-    
-        <!-- Link css -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
-        <!-- Link font awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon_io/favicon-32x32.png' %}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon_io/favicon-16x16.png' %}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon_io/apple-touch-icon.png' %}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Table & Vine | Signup</title>
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon_io/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon_io/favicon-16x16.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon_io/apple-touch-icon.png' %}">
+</head>
+
 <body>
-    <div class="signup-title">
+    <div class="form-container">
         <!-- Page Title-->
-    <h1>SignUp Page</h1>
+        <h1 class="signup-title">SignUp Page</h1>
+        <form method="post">
+            {% csrf_token %}
+            <!-- Adds security to Protect the form from CSRF attacks -->
+            {{ form.as_p }}
+            <!-- Displays the form with fields in <p> tags -->
+            <button type="submit" class="signup-btn">Signup</button>
+        </form>
+        <!-- Link to take the user back to the homepage -->
+        <a href="{% url 'homepage' %}">Back to HomePage</a>
     </div>
-    <form method="post">
-        {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
-        {{ form.as_p }} <!-- Displays the form with fields in <p> tags -->
-        <button type="submit">Signup</button>
-    </form>
-    <!-- Link to take the user back to the homepage -->
-<a href="{% url 'homepage' %}">Back to HomePage</a>
 </body>
+
 </html>

@@ -20,12 +20,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon_io/apple-touch-icon.png' %}">
 </head>
 <body>
+    <div class="form-container">
     <h1>Login</h1>
     <form method="post">
         {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
         {{ form.as_p }} <!-- Display form fields inside <p> tags -->
-        <button type="submit">Login</button>
+        <button type="submit" class="login-btn">Login</button>
         <a href="{% url 'signup' %}">Don't have an account? Sign up here!</a>
     </form>
+</div>
 </body>
 </html>

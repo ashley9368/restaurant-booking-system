@@ -341,6 +341,64 @@ ul {
     list-style-type: none; /* removes black dots next to social icons (and opening times)*/
 }
 
+/* Login and signup page styles */
+.form-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 10px;
+    background: #8697C4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Login title */
+.form-container h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #000000;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block; /* Makes sure the button takes its own line */
+    margin-left: auto; /* Pushes it from the left */
+    margin-right: auto; /* Pushes it from the right */
+}
+
+/* Signup button */
+.signup-btn {
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #000000;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block; /* Makes sure the button takes its own line */
+    margin-left: auto; /* Pushes it from the left */
+    margin-right: auto; /* Pushes it from the right */
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 /* Hides content visually but keeps it readable for screen readers */
 .sr-only {
     position: absolute;
