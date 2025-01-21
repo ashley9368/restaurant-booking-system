@@ -344,7 +344,7 @@ ul {
 /* Login and signup page styles */
 .form-container {
     width: 300px;
-    margin: 100px auto;
+    margin: 50px auto;
     padding: 10px;
     background: #8697C4;
     border-radius: 10px;
@@ -397,6 +397,11 @@ form p {
     margin-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+/* Target username and password in login form */
+#id_username, #id_password {
+    margin: 10px auto;
 }
 
 /* Hides content visually but keeps it readable for screen readers */

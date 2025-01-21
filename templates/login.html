@@ -24,7 +24,13 @@
     <h1>Login</h1>
     <form method="post">
         {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
-        {{ form.as_p }} <!-- Display form fields inside <p> tags -->
+
+        <label for="id_username">Username:</label>
+        <input type="text" name="username" id="id_username" required>
+
+        <label for="id_password">Password:</label>
+        <input type="password" name="password" id="id_password" required>
+
         <button type="submit" class="login-btn">Login</button>
         <a href="{% url 'signup' %}">Don't have an account? Sign up here!</a>
     </form>
