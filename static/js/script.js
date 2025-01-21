@@ -13,3 +13,9 @@ function toggleAccountMenu() {
     // Toggle the 'visible' class to show or hide the menu
     if (menu) menu.classList.toggle("visible");
 }
+
+/* Alert message for making initial booking */
+
+document.getElementById("booking-form").addEventListener("submit", function(event) {
+    alert("Booking successful!");
+});
