@@ -26,10 +26,8 @@
         <!-- Page Title-->
         <h1 class="signup-title">SignUp Page</h1>
         <form method="post">
-            {% csrf_token %}
-            <!-- Adds security to Protect the form from CSRF attacks -->
-            {{ form.as_p }}
-            <!-- Displays the form with fields in <p> tags -->
+            {% csrf_token %} <!-- Adds security to Protect the form from CSRF attacks -->
+            {{ form.as_p }} <!-- Displays the form with fields in <p> tags -->
             <button type="submit" class="signup-btn">Signup</button>
         </form>
         <!-- Link to take the user back to the homepage -->

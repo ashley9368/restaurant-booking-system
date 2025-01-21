@@ -100,16 +100,18 @@ Manage Booking w3c validation
 Menu w3c validation
 ![HTML Validation - Menu](static/images/menu-w3c.png)
 
-There is one error on the signup page related to {{ form.as_p }}, But i am not sure how to fix it.
+There are a couple of errors on the signup page but i am unsure how to fix them unfortunately.
 
 Signup w3c validation
-![HTML Validation - Signup](static/images/signup-w3c-1-error.png)
+![HTML Validation - Signup](static/images/signup-w3c-error.png)
 
 Css was tested using the W3C CSS Validation service 
 
 [https://jigsaw.w3.org/css-validator/]
 
+Passed with 1 warning
 ![CSS Validation Complete](static/images/css-validation.png)
+
 
 ## Python Testing
 
