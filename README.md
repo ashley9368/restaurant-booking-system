@@ -4,7 +4,7 @@
 
 ![Table & Vine](static/images/am-i-responsive.png)
 
-Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
+Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute..
 ___
 
 Table & Vine is a restaurant booking website that allows customers to reserve a table for a specific date and time. They can also bring their friends along and explore the menu in advance to decide if it's the perfect spot for their booking.
