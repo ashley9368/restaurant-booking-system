@@ -346,12 +346,19 @@ ul {
 
 /* Login and signup page styles */
 .form-container {
-    width: 300px;
+    width: 350px;
     margin: 50px auto;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
+    background-color: #ffffff;
 }
+
+.form-container label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 
 /* Login title */
 .form-container h1 {
