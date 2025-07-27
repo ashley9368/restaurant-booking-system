@@ -10,6 +10,10 @@ form and saving the users details on submission
 
 
 def signup(request):
+    # If user tries to access signup, take them home
+    if request.user.is_authenticated:
+        return redirect('homepage')
+
     # Check if the form is submitted
     if request.method == 'POST':
         form = SignupForm(request.POST)
@@ -27,6 +31,10 @@ def signup(request):
 
 
 def login_view(request):
+    # If user tries to access login, take them home
+    if request.user.is_authenticated:
+        return redirect('homepage')
+
     # Use submitted data if available, otherwise show empty form
     form = LoginForm(data=request.POST or None)
     # Check if the form is submitted
