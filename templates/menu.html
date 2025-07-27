@@ -22,7 +22,7 @@
 </head>
 
 <!-- Set background image-->
-<body style="background-image: url('{% static 'images/background-img.avif' %}');">
+<body>
     <!-- Visually Hidden Description for Screen Readers -->
     <div class="sr-only">
         A modern restaurant with warm wooden seating.
@@ -36,9 +36,11 @@
         <i class="fa-solid fa-bars"></i>
     </button>
     <div id="dropdownList" class="menu-items">
-        <a href="{% url 'make_booking' %}">Make A Booking</a>
         <a href="{% url 'homepage' %}">Back To Home</a>
+        <a href="{% url 'make_booking' %}">Make A Booking</a>
+        {% if not user.is_authenticated %}
         <a href="{% url 'signup' %}">Sign Up</a>
+        {% endif %}
     </div>
 </div>
 <!-- Login/signup/ dropdownmenu -->

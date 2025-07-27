@@ -3,9 +3,10 @@
     text-align: center;
     font-size: 36px;
     flex: 1;
-    color: #ffffff;
+    color: #000000;
     border-radius: 8px;
-    background-color: #8697c4;
+    border: 1px solid #000000;
+    background-color: #ffffff;
     padding: 5px 10px;
     font-family: 'poppins', sans-serif;
     font-weight: 700; 
@@ -27,7 +28,7 @@
 }
 
 .menu-items a {
-    color: #5280ff;
+    color: #0036cc;
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -83,18 +84,17 @@
 
 /* Login icon (top right) */
 .menu-toggle-account {
-    background-color: #8697C4;
+    background-color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
     font-size: 30px;
-    color: #ffffff;
     padding: 5px;
     margin: 0;
 }
 
 .menu-toggle-account i {
     font-size: 30px;
-    color: #FFFFFF;
+    color: #000000;
     vertical-align: middle;
 }
 
@@ -107,7 +107,7 @@ justify-content: center;
 align-items: center;
 
 /* Background Image */
-background-image: url("{% static 'core/images/background-image.jpeg' %}");
+background-image: url("../images/background-img.avif");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -118,9 +118,9 @@ main {
     flex: 1; /* Takes all remaining space, pushing footer down */
     display: flex;
     flex-direction: column; 
-    justify-content: center;   /* Centers them vertically */
-    align-items: center;       /* Centers them horizontally */
-    height: 100%;              /* Ensures main takes up available space */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     margin: 0;
     padding: 0;
     padding-bottom: 200px;
@@ -203,10 +203,11 @@ ul.messages li {
 /* Main buttons for homepage (book a table/ view our menu */
 .btn {
     margin: 0.5em 0;          
-    background-color: #8697C4;
+    background-color: #ffffff;
     padding: 18px;
     border-radius: 10px;
-    color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
     font-weight: bold;
     font-size: 24px;
     text-decoration: none;
@@ -425,9 +426,10 @@ ul {
 
 .menu-items a {
     margin: 8px 15px; /*Space out menu items */
-    color: #ffffff;
-    font-size: 19px;
-    background-color: #8697C4;
+    color: #000000;
+    font-size: 22px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
     border-radius: 10px;
     padding: 5px;
 }
