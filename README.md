@@ -97,7 +97,7 @@ ___
 
 ## Colour Scheme
 
-The project uses soft blue for buttons, headers, and the footer, with white text for readability. This combination creates a simple and modern look while keeping the design clean and easy to navigate.
+The project uses White for buttons, headers, and the footer, with black text for readability. This combination creates a simple and modern look while keeping the design clean and easy to navigate.
 
 ## Typography
 
